@@ -30,12 +30,12 @@
             <td><input type="number" name="price" value="${requestScope['product'].getPrice()}"/></td>
         </tr>
         <tr>
-            <td>Quantity:</td>
-            <td><input type="number" name="quantity" value="${requestScope["product"].getQuantity()}"></td>
+            <td>Detail: </td>
+            <td><input type="text" name="detail" value="${requestScope["product"].getDetail()}"></td>
         </tr>
         <tr>
-            <td>Origin</td>
-            <td><input type="text" name="origin" value="${requestScope["product"].getOrigin()}"></td>
+            <td>Producer: </td>
+            <td><input type="text" name="producer" value="${requestScope["product"].getProducer()}"></td>
         </tr>
         <tr>
             <td><input type="submit" value="Update"/></td>

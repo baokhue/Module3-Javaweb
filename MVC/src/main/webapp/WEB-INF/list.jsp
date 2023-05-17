@@ -14,8 +14,8 @@
 </head>
 <body>
     <h1>All product</h1>
-    <button type="button" class="btn btn-primary" style="margin-top: 20px; margin-bottom: 20px">
-        <a style="color: white; text-decoration: none" href="/product?action=create">Create new product</a>
+    <button type="button" class="btn btn-primary" style="margin-top: 20px; margin-bottom: 20px; background-color: aquamarine; border: 1px solid">
+        <a style="color: black; text-decoration: none" href="/product?action=create">Create new product</a>
     </button>
     <fmt:setLocale value="vi_VN"/>
     <table>
@@ -23,8 +23,8 @@
         <th>ID</th>
         <th>Name</th>
         <th>Price</th>
-        <th>Quantity</th>
-        <th>Origin</th>
+        <th>Detail</th>
+        <th>Producer</th>
         <th></th>
     </tr>
     <c:forEach items="${products}" var="p">

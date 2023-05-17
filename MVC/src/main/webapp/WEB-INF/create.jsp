@@ -31,11 +31,11 @@
         </tr>
         <tr>
             <td>Detail:</td>
-            <td><input type="number" name="quantity"></td>
+            <td><input type="text" name="detail"></td>
         </tr>
         <tr>
-            <td>Origin</td>
-            <td><input type="text" name="origin"></td>
+            <td>Producer</td>
+            <td><input type="text" name="producer"></td>
         </tr>
         <tr>
             <td><input type="reset" value="Reset"/></td>

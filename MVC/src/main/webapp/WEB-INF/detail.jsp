@@ -18,15 +18,15 @@
     <th>ID</th>
     <th>Name</th>
     <th>Price</th>
-    <th>Quantity</th>
-    <th>Origin</th>
+    <th>Detail</th>
+    <th>Producer</th>
 </tr>
 <tr>
     <td>${requestScope["product"].getId()}</td>
     <td>${requestScope["product"].getName()}</td>
     <td><fmt:formatNumber value="${requestScope['product'].getPrice()}" type="currency"/></td>
-    <td>${requestScope["product"].getQuantity()}</td>
-    <td>${requestScope["product"].getOrigin()}</td>
+    <td>${requestScope["product"].getDetail()}</td>
+    <td>${requestScope["product"].getProducer()}</td>
 </tr>
 </table>
 </body>
