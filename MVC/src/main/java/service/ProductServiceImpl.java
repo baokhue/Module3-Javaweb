@@ -35,7 +35,7 @@ public class ProductServiceImpl implements ProductService{
     }
 
     @Override
-    public boolean search(Product product) {
-        return repository.search(product);
+    public Product search(String name) {
+        return repository.search(name);
     }
 }

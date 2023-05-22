@@ -42,7 +42,12 @@ public class ProductServlet extends HttpServlet {
         }
     }
 
-    private void showSearchProduct(HttpServletRequest request, HttpServletResponse response) {
+    private void showSearchProduct(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String nameSearch = request.getParameter("name");
+        Product product = service.search(nameSearch);
+        request.setAttribute("product", product);
+        request.getRequestDispatcher("/WEB-INF/search.jsp")
+                .forward(request, response);
     }
 
     private void showList(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -52,11 +57,9 @@ public class ProductServlet extends HttpServlet {
                 .forward(request, response);
     }
 
-    private void showDeleteProduct(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        int idDetail = Integer.parseInt(request.getParameter("id"));
-        if (service.delete(idDetail)){
-            response.sendRedirect("/product");
-        }
+    private void showDeleteProduct(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        request.getRequestDispatcher("/WEB-INF/delete.jsp")
+                .forward(request, response);
     }
 
     private void showDetail(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -90,8 +93,18 @@ public class ProductServlet extends HttpServlet {
             case "update":
                 doUpdate(request, response);
                 break;
+            case "delete":
+                doDel(request, response);
+                break;
             default:
                 response.sendRedirect("/product?action=list");
+        }
+    }
+
+    private void doDel(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        int idDetail = Integer.parseInt(request.getParameter("id"));
+        if (service.delete(idDetail)){
+            response.sendRedirect("/product");
         }
     }
 

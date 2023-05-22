@@ -1,3 +1,4 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%--
   Created by IntelliJ IDEA.
   User: Thu Nguyen
@@ -11,6 +12,23 @@
     <title>Searched Product</title>
 </head>
 <body>
-
+<h1>Searched Product</h1>
+    <fmt:setLocale value="vi_VN"/>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Detail</th>
+        <th>Producer</th>
+    </tr>
+    <tr>
+        <td>${requestScope["product"].getId()}</td>
+        <td>${requestScope["product"].getName()}</td>
+        <td><fmt:formatNumber value="${requestScope['product'].getPrice()}" type="currency"/></td>
+        <td>${requestScope["product"].getDetail()}</td>
+        <td>${requestScope["product"].getProducer()}</td>
+    </tr>
+</table>
 </body>
 </html>

@@ -59,13 +59,7 @@ public class ProductRepositoryImpl implements ProductRepository{
         return false;
     }
 
-    @Override
-    public boolean search(Product product) {
-        if (productMap.containsKey(product.getName())) {
-            productMap.get(product.getName());
-            return true;
-        }
-
-        return false;
+    public Product search(String name) {
+        return productMap.get(name);
     }
 }
