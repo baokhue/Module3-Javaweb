@@ -1,0 +1,66 @@
+.header {
+    background-color: black;
+    color: aliceblue;
+    padding: 0;
+    margin: 0;
+    border-bottom-color: aliceblue;
+}
+
+ion-icon {
+    font-size: 50px;
+}
+
+#menu_tool {
+    height: 50px;
+    padding:0;
+    margin:0;
+    background-color: rgba(0,0,0,0.77);
+    /*border: 1px solid #CDCDCD;*/
+}
+
+#menu_tool ul, #menu_tool li{
+    padding:0;
+    margin:0;
+}
+
+#menu_tool li{
+    position: relative;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding:0;
+}
+
+#menu_tool li a {
+    width: 100px;
+    height: 30px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    /*background-color: rgba(0,0,0,0.77);*/
+    color: darkgray;
+}
+
+#menu_tool ul ul li a {
+    width: 200px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+#menu_tool li a:hover{
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+
+#menu_tool ul ul{
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    visibility: hidden;
+}
+
+#menu_tool ul li:hover ul{
+    visibility: visible;
+}
